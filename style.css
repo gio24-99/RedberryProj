@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "redberry";
+    src: url("resources/fonts/HelveticaNeue.ttc");
+}
+body,html{
+    margin: 0; 
+
+}
+
+* {
+    font-family: redberry;
+}
+
+.land {
+    height: 482px;
+    width: 781px;
+    margin-top: 103px;
+}
+
+.imageResp{
+    display: none;
+}
+
+.logo {
+    width: 112px;
+    height: 18px;
+    margin-top: 79px;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.landingbtn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 123px;
+}
+
+.landingbtn>button {
+    background: #62A1EB;
+    border-radius: 8px;
+    width: 450px;
+    height: 60px;
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+@media screen and (max-height: 844px) {
+    html,body{
+        max-width: 100%;
+        overflow-x: hidden !important;
+        overflow-y: hidden;
+    }
+    .land{
+        display: none;
+    }
+    .imageResp{
+        display: block;
+        height: 380px;
+        margin-top: 110px;
+    }
+   
+    .logo {
+        width: 130px;
+        height: auto;
+        margin-top: 60px;
+    }
+
+    .landingbtn {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 110px;
+    }
+
+    .landingbtn>button{
+        background: #62A1EB;
+        border-radius: 8px;
+        width: 360px;
+        height: 60px;
+        color: white;
+        border: none;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }

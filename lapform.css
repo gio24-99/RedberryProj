@@ -1,0 +1,585 @@
+@font-face {
+    font-family: "redberry";
+    src: url("resources/fonts/HelveticaNeue.ttc");
+}
+
+body,
+html {
+    margin: 0;
+    background: #F6F6F6;
+}
+
+
+* {
+    font-family: redberry;
+}
+
+.backBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: none;
+    background: #D9D9D9;
+    padding: 0;
+    cursor: pointer;
+}
+
+.backBtn>img {
+    height: 16px;
+    width: 9.21px;
+}
+
+.Top {
+    margin-left: 70px;
+    margin-top: 53px;
+    display: flex;
+    flex-direction: row;
+    gap: 625px;
+}
+
+.formNav {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.formNav>p {
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 24px;
+    color: #232323;
+    text-decoration: none;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    width: 185px;
+    height: 2px;
+    background-color: #000000;
+    bottom: -15px;
+    left: 28.5px;
+}
+
+
+.form {
+    margin-top: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inner {
+    width: 1150px;
+    height: 1500px;
+    padding-bottom: 40px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 350px;
+    border: 2px dashed #4386A9;
+    background-color: #F6F6F6;
+    margin-top: 60px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.upload::before {
+    content: attr(data-content);
+    position: absolute;
+    margin-bottom: 95px;
+    font-weight: 600;
+}
+
+.uploadImg {
+    display: none;
+}
+
+.upLbl {
+    display: block;
+    width: 170px;
+    height: 45px;
+    line-height: 50px;
+    text-align: center;
+    background: #1172c2;
+    color: #fff;
+    font-size: 15px;
+    text-transform: Uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upLblPH {
+    display: none;
+}
+
+#upLblOut {
+    display: none;
+}
+
+.preview {
+    display: contents;
+}
+
+.preview>img {
+    max-width: 680px;
+    max-height: 320px;
+    display: none;
+}
+
+#PreviewTxt {
+    display: contents;
+}
+
+.UnderPreview {
+    display: flex;
+    flex-direction: row;
+    gap: 380px;
+}
+
+input {
+    border: 1.8px solid #8AC0E2;
+    border-radius: 8px;
+    width: 278px;
+    height: 40px;
+    padding-left: 13px;
+}
+
+.lap {
+    display: flex;
+    gap: 90px;
+    padding-top: 30px;
+}
+
+.lapName {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lapName>label {
+    font-weight: 700;
+}
+
+.lapName>p {
+    color: #2e2e2eb9;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 21px;
+    margin-block-start: 0;
+    margin-top: -3px;
+}
+
+.selectLap {
+    color: black;
+    height: 45px;
+    width: 320px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 15px;
+    appearance: none;
+    background: url(./resources/images/dropwdown.png) #ebebeb no-repeat;
+    background-size: 1rem;
+    background-position: right 1em center;
+    font-weight: 700;
+}
+
+.cpu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.cpu>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cpu>div>label {
+    font-weight: 700;
+}
+
+.cpu>div>input {
+    width: 215px;
+}
+
+.cpu>div>p {
+    color: #2e2e2eb9;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 21px;
+    margin-block-start: 0;
+    margin-top: -3px;
+}
+
+hr {
+    width: 700px;
+    margin-top: 70px;
+}
+
+.selectCpu {
+    color: black;
+    height: 45px;
+    width: 215px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 15px;
+    appearance: none;
+    background: url(./resources/images/dropwdown.png) #ebebeb no-repeat;
+    background-size: 1rem;
+    background-position: right 1em center;
+    font-weight: 700;
+}
+
+.mem {
+    display: flex;
+    margin-top: 70px;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.memRadio {
+    margin-top: 3px;
+}
+
+.memRadio>input {
+    all: revert;
+    margin-top: 20px;
+    accent-color: #1172c2;
+    color: #1172c2;
+}
+
+#memT {
+    font-weight: 700;
+}
+
+#hdd {
+    margin-left: 50px;
+}
+
+.regDay {
+    display: flex;
+    flex-direction: row;
+    gap: 130px;
+    margin-top: 30px;
+}
+
+#lapPrice {
+    background: url(./resources/images/gela.png) no-repeat;
+    background-size: 0.8rem;
+    background-position: right 0.8em center;
+}
+
+.lapCond {
+    display: flex;
+    justify-content: flex-start;
+    width: 725px;
+    margin-top: 70px;
+}
+
+
+.lapRadio>input {
+    all: revert;
+    margin-top: 20px;
+    accent-color: #1172c2;
+    color: #1172c2;
+}
+
+.lapBtn {
+    display: flex;
+    flex-direction: row;
+    width: 730px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.lapBtn>button:nth-child(1) {
+    color: #62A1EB;
+    font-weight: 600;
+    font-size: 15px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.lapBtn>button:nth-child(2) {
+    background-color: #62A1EB;
+    color: white;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    border-radius: 12px;
+}
+
+#warningP {
+    position: absolute;
+    margin-top: -180px;
+    display: none;
+    background-image: url('./resources/images/warning.png');
+    background-size: 40px 35px;
+    width: 40px;
+    height: 35px;
+
+}
+
+.eP {
+    color: #e52f2f1e;
+}
+
+.ButtonGen {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#half {
+    display: none;
+}
+
+@media screen and (max-height: 844px) {
+    body, html {
+    margin-bottom: -700px;
+    }
+    #lapRes {
+        display: none;
+    }
+
+    .Top {
+        margin-left: 0px;
+        margin-top: 20px;
+        display: flex;
+        gap: 60px;
+        justify-content: center;
+        flex-direction: row;
+        margin-right: 110px;
+    }
+
+    input {
+        border: 1.8px solid #8AC0E2;
+        border-radius: 8px;
+        width: 350px;
+        height: 40px;
+        padding-left: 13px;
+    }
+
+    .inner {
+        width: 100%;
+        height: 764px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-top: -40px;
+        padding: 0;
+    }
+
+    .formNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+        margin-right: -15px;
+    }
+
+    .formNav>p {
+        font-weight: 700;
+        font-size: 15px;
+        font-style: normal;
+        line-height: 24px;
+        color: #232323;
+        text-decoration: none;
+        text-align: center;
+        width: 220px;
+
+    }
+
+    #half {
+        all: revert;
+        margin-top: -15px;
+        color: #2e2e2eb9;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+    .active {
+        position: relative;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .backBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin-left: 42px;
+        margin-top: 0px;
+    }
+
+    #lapRes {
+        display: none;
+    }
+
+    .form {
+        width: 390px;
+        height: 1843px;
+        margin-top: 7px;
+    }
+
+    .inner {
+        margin-top: -20px;
+        height: 1819px;
+        
+    }
+
+    .upload {
+        height: 300px;
+        width: 350px;
+        margin-top: -200px;
+    }
+
+    .upload::before {
+        content: 'ლეპტოპის ფოტოს ატვირთვა';
+        color: #4386A9;
+        margin-bottom: -50px;
+    }
+
+
+    hr {
+        margin-top: 20px;
+        border-top: 8px solid #ebe8e8;
+        width: 387px;
+    }
+
+    .upLbl {
+        display: none;
+    }
+
+    .upLblPH {
+        display: contents;
+    }
+
+    .upLblPH::after {
+        content: '';
+        background-image: url('./resources/images/PhoneUpload.png');
+        background-repeat: no-repeat;
+        height: 45px;
+        width: 50px;
+        background-size: 50px 45px;
+        margin-top: -45px;
+    }
+
+    .lap {
+        display: flex;
+        height: 180px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    #lapBrand {
+        width: 370px;
+    }
+
+    .lapName:nth-child(2) {
+        margin-top: -100px;
+    }
+
+    .cpu {
+        display: flex;
+        flex-direction: column;
+        margin-top: -10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Cpu {
+        width: 370px;
+    }
+
+    #CpuCores {
+        width: 350px;
+    }
+
+    #CpuThreads {
+        width: 350px;
+    }
+
+    .mem {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    .botrll {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .regDay {
+        display: flex;
+        flex-direction: column;
+        gap: 130px;
+    }
+
+    .lapCond {
+        display: flex;
+        justify-content: flex-start;
+        width: 370px;
+        margin-top: unset;
+    }
+    .lapBtn{
+        width: 355px;
+        margin-top: 60px;
+    }
+    .UnderPreview{
+        margin-top: 35px;
+        gap: 50px;
+    }
+    #FileInfo{
+        width: 160px;
+    }
+    #warningP{
+        margin-top: 155px;
+    }
+}

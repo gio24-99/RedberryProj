@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lapform.css">
+    <title>Document</title>
+    <script src="lapform.js" defer></script>
+</head>
+
+<body>
+    <div class="offset">
+        <div class="Top">
+            <div id='backBtn' class="backBtn">
+                <img src="./resources/images/arrow.png" alt="">
+            </div>
+            <div class="formNav">
+                <P id="lapRes">თანამშრომლების ინფო</P>
+                <P class="active">ლეპტოპის მახასიათებლები</P>
+                <p id="half">2/2</p>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="inner">
+            <div class="upload" id="upload" data-content="ჩააგდე ან ატვირთე ლეპტოპის ფოტო">
+                <p id="warningP" data-display="block"></p>
+                <div class="preview">
+
+                    <img id="preview-img">
+                </div>
+
+                <label id='upLbl' class="upLbl" for="uploadImg">ატვირთვა</label>
+                <label id='upLbl' class="upLblPH" for="uploadImg"></label>
+                <input type="file" accept="image/*" class="uploadImg" id="uploadImg">
+            </div>
+            <div class="UnderPreview">
+                <p id="FileInfo"></p>
+                <label id="upLblOut" class="upLbl" for="uploadImg">თავიდან ატვირთვა</label>
+            </div>
+            <div class="lap">
+                <div class="lapName">
+                    <label for="selectLap">ლეპტოპის სახელი</label>
+                    <input id='ModelName' type="text" placeholder="HP">
+                    <p id="ModelNameLabel">ლათინური ასოები, ციფრები, !@#$%^&*()_+= </p>
+                </div>
+                <div class="lapName">
+                    <label for="">&nbsp;</label>
+                    <select name="" id="lapBrand" class="selectLap">
+                        <option value="brand">ლეპტოპის ბრენდი</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <div class="cpu">
+                    <div>
+                        <label for="">&nbsp;</label>
+                        <select name="" id="Cpu" class="selectCpu">
+                            <option value="cpu">CPU</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">CPU-ს ბირთვი</label>
+                        <input id="CpuCores" type="number" placeholder="14">
+                        <p id="CpuCoresLabel">მხოლოდ ციფრები</p>
+                    </div>
+                    <div>
+                        <label for="">CPU-ს ნაკადი</label>
+                        <input id='CpuThreads' type="number" placeholder="28">
+                        <p id="CpuThreadLabel">მხოლოდ ციფრები</p>
+                    </div>
+                </div>
+                <div class="mem">
+                    <div class="lapName">
+                        <label for="">ლეპტოპის მეხსიერება</label>
+                        <input id="RamAmount" type="number" placeholder="16">
+                        <p id="RamLabel">მხოლოდ ციფრები</p>
+                    </div>
+                    <div class="memRadio">
+                        <label id="memT">მეხსიერების ტიპი</label>
+                        <br>
+                        <input type="radio" id="ssd" name="MemType" value="ssd" checked>
+                        <label for="ssd">SSD</label>
+                        <input type="radio" id="hdd" name="MemType" value="hdd">
+                        <label for="hdd">HDD</label>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="botrll">
+            <div class="regDay">
+                <div class="lapName">
+                    <label for="day">შეძენის რიცხვი (არჩევითი)</label>
+                    <input id="PurDate" type="text" name="day" id="day" placeholder="დდ/თთ/წწწწ">
+
+                </div>
+                <div class="lapName">
+                    <label for="">ლეპტოპის ფასი</label>
+                    <input type="number" name="" id="lapPrice" placeholder="0000">
+                    <p id="PriceLabel">მხოლოდ ციფრები</p>
+                </div>
+            </div>
+            <div class="lapCond">
+                <div class="lapRadio">
+                    <label id="memT">ლეპტოპის მდგომარეობა</label>
+                    <br>
+                    <input type="radio" id="new" name="lapType" value="new" checked>
+                    <label for="new">ახალი</label>
+                    <input type="radio" id="used" name="lapType" value="used">
+                    <label for="used">მეორადი</label>
+                </div>
+            </div>
+        </div>
+            <div class="lapBtn">
+                <button id='btnback' class='ButtonGen'>უკან</button>
+                <button id='btnNext' class='ButtonGen'>დამახსოვრება</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
